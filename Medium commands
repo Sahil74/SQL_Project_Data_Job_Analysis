@@ -1,0 +1,30 @@
+CREATE table job_applied(
+    job_id INT,
+    application_sent_date Date,
+    custom_resume boolean,
+    resume_file_name varchar(250),
+    cover_letter_sent boolean,
+    cover_letter_file_name varchar(255),
+    status varchar(50)
+);
+
+Insert into job_applied VALUES(02,'2024-02-11',False,'resume_2.pdf',true,'cover_letter_2.pdf','rejected'),
+(03,'2024-04-01',true,'resume_3.pdf',true,'cover_letter_3.pdf','submitted'),
+(04,'2024-02-9',False,'resume_4.pdf',False,'cover_letter_4.pdf','approved'),
+(01,'2024-09-19',true,'resume_5.pdf',true,'cover_letter_5.pdf','submitted');
+
+
+
+update job_applied
+set contact = 'Big head'
+where job_id =5;  
+
+Alter table job_applied
+rename column contact to contact_name
+
+Alter table job_applied
+alter column contact_name type text
+
+
+Alter table job_applied
+Drop column contact_name;
